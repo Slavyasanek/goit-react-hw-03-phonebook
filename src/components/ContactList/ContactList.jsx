@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 class ContactList extends Component {
     state = {}
     static propTypes = {
-        contacts: PropTypes.shape({
+        contacts: PropTypes.arrayOf(PropTypes.shape({
             id: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
             number: PropTypes.string.isRequired
-        }),
+        })),
         deleteContact: PropTypes.func.isRequired,
     }
 
